@@ -1,0 +1,246 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+  background: #0f0f17;
+  color: #e0e0ff;
+  line-height: 1.6;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1.5rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  background: rgba(15, 15, 23, 0.7);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(100, 100, 255, 0.12);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #8a7cff;
+  letter-spacing: -1px;
+}
+
+.navi-links {
+  display: flex;
+  gap: 2.6rem;
+  font-weight: 500;
+}
+
+.navi-links a {
+  color: azure;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.navi-links a:hover,
+.navi-links a:focus {
+  color: #8a7cff;
+  outline: none;
+}
+
+/* Hero */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center; /* keeps vertical centering */
+  justify-content: center;
+  padding: 0 5% 0 5%; /* was 0 5% → change to: */
+  /* ↓ Add this line or increase the value */
+  padding-top: 100px; /* 80–160px is common; adjust to taste */
+  background: linear-gradient(135deg, #0f0f17 0%, #1a1a2e 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  max-width: 1200px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.text-column {
+  padding-right: 1rem;
+}
+
+.greeting {
+  font-size: 1.35rem;
+  color: #8a7cff;
+  margin-bottom: 2.8;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: clamp(1rem, 2vw, 6rem);
+  line-height: 0.92;
+  margin-bottom: 0.4rem;
+}
+
+h4 {
+  font-size: clamp(1rem, 2vw, 6rem);
+  line-height: 0.92;
+  margin-bottom: 0.4rem;
+}
+
+ul {
+  font-size: clamp(1rem, 2vw, 6rem);
+  line-height: 0.92;
+  margin-bottom: 1rem;
+  font-size: 1.18rem;
+  max-width: 520px;
+  color: #b0b0ff;
+}
+.role {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  color: #8a7cff;
+  margin-bottom: 1.8rem;
+  font-weight: 700;
+}
+
+.description {
+  font-size: 1.18rem;
+  max-width: 520px;
+  color: #b0b0ff;
+  margin-bottom: 2.5rem;
+  line-height: 1.7;
+}
+
+.btn-group {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.9rem 2.2rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #6a5acd;
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: #7b6be0;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(106, 90, 205, 0.35);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid #6a5acd;
+  color: #8a7cff;
+}
+
+.btn-outline:hover {
+  background: rgba(106, 90, 205, 0.12);
+  transform: translateY(-3px);
+}
+
+.image-column {
+  position: relative;
+}
+
+.profile-img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 20px;
+  display: block;
+  margin: 0 auto;
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.55),
+    0 0 0 1px rgba(0, 212, 255, 0.15);
+}
+
+/* Other sections (placeholder styling) */
+.section {
+  padding: 8rem 5% 6rem;
+  min-height: 60vh;
+}
+
+.section-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section h2 {
+  font-size: clamp(2.5rem, 5vw, 3.8rem);
+  margin-bottom: 2rem;
+  color: #8a7cff;
+}
+
+.AboutDescription {
+  font-size: 1.18rem;
+  color: #b0b0ff;
+  margin-bottom: 2.5rem;
+  line-height: 1.7;
+  display: flex;
+  justify-content: space-between;
+}
+
+.AboutDescription p {
+  width: 400px;
+}
+
+.Skills {
+  margin-top: -20%;
+}
+
+/* Mobile-first responsive adjustments */
+@media (min-width: 768px) {
+  .hero-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+  }
+
+  .profile-img {
+    max-width: 480px;
+    max-height: 480px;
+  }
+
+  .text-column {
+    padding-right: 2.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero-content {
+    max-width: 1280px;
+  }
+}
