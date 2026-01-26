@@ -205,6 +205,28 @@ ul {
   color: #8a7cff;
 }
 
+.Rcontact {
+  font-size: clamp(2.5rem, 5vw, 3.8rem);
+  margin-bottom: 2rem;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-item {
+  width: 10.33%;
+}
+
+.section a {
+  color: white;
+}
+.email {
+  text-align: center; /* centers Email text */
+}
+
 .AboutDescription {
   font-size: 1.18rem;
   color: #b0b0ff;
@@ -222,6 +244,130 @@ ul {
   margin-top: -20%;
 }
 
+/* ─── Services ─── */
+.section-intro {
+  font-size: 1.2rem;
+  color: #b0b0ff;
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 3.5rem;
+  line-height: 1.7;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.service-card {
+  background: rgba(25, 25, 45, 0.6);
+  border: 1px solid rgba(138, 124, 255, 0.15);
+  border-radius: 16px;
+  padding: 2.2rem 1.8rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(6px);
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  border-color: #8a7cff;
+  box-shadow: 0 20px 40px rgba(138, 124, 255, 0.18);
+}
+
+.service-icon {
+  font-size: 2.8rem;
+  margin-bottom: 1.2rem;
+  color: #8a7cff;
+}
+
+.service-card h3 {
+  font-size: 1.45rem;
+  margin-bottom: 0.9rem;
+  color: #e0e0ff;
+}
+
+.service-card p {
+  color: #b0b0ff;
+  font-size: 1.05rem;
+}
+
+/* ─── Portfolio ─── */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.2rem;
+  margin-top: 2rem;
+}
+
+.portfolio-card {
+  background: rgba(25, 25, 45, 0.6);
+  border: 1px solid rgba(138, 124, 255, 0.12);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.35s ease;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-12px);
+  border-color: #8a7cff;
+  box-shadow: 0 25px 50px rgba(138, 124, 255, 0.22);
+}
+
+.portfolio-image-placeholder {
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+}
+
+.portfolio-image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.portfolio-card:hover .portfolio-image-placeholder img {
+  transform: scale(1.08);
+}
+
+.coming-soon .portfolio-image-placeholder {
+  background: linear-gradient(135deg, #1a1a2e, #2a1a4a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.soon-text {
+  color: #8a7cff;
+  font-size: 1.6rem;
+  font-weight: 700;
+  opacity: 0.7;
+}
+
+.portfolio-info {
+  padding: 1.6rem 1.8rem;
+}
+
+.portfolio-info h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: #e0e0ff;
+}
+
+.tech {
+  font-size: 0.95rem;
+  color: #8a7cff;
+  margin-bottom: 0.8rem;
+  font-weight: 500;
+}
+
+.desc {
+  color: #b0b0ff;
+  font-size: 1.03rem;
+  line-height: 1.5;
+}
+
 /* Mobile-first responsive adjustments */
 @media (min-width: 768px) {
   .hero-content {
@@ -232,6 +378,7 @@ ul {
   .profile-img {
     max-width: 480px;
     max-height: 480px;
+    border-radius: 30%;
   }
 
   .text-column {
