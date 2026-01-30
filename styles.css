@@ -199,6 +199,29 @@ ul {
   margin: 0 auto;
 }
 
+/* The certificate/badge */
+.certificate-badge {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  width: 140px; /* adjust size */
+  height: auto;
+  z-index: 5;
+  opacity: 0.92;
+  transition: all 0.3s ease;
+}
+
+.certificate-badge:hover {
+  transform: scale(1.08);
+  opacity: 1;
+}
+
+.certificate-badge img {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.5));
+}
+
 .section h2 {
   font-size: clamp(2.5rem, 5vw, 3.8rem);
   margin-bottom: 2rem;
